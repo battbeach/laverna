@@ -15,7 +15,7 @@ define([
 
         // If it is not Cordova app, use HTML5's saveAs function
         if (!window.cordova) {
-            return new Q(fileSaver(content, fileName));
+            return new Q(saveAs(content, fileName));
         }
 
         var defer = Q.defer();
